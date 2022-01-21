@@ -1,6 +1,8 @@
 import './App.css';
 import React from 'react';
-import recipes from './recipes.js';
+import allRecipes from './recipes.js';
+
+const allRecipes_keys = Object.keys(allRecipes);
 
 class Header extends React.Component {
   render () {
@@ -12,30 +14,40 @@ class Header extends React.Component {
   }
 }
 
-function NumberList(props) {
-  const listItems = recipes.map((recipe) =>
-    <li>{recipe.name}</li>
+function RecipeItem(props) {
+  return (
+    <li>
+      <p className="text-gray-500">{props.recipe.name}</p>
+    </li>
+  );
+}
+
+function RecipeList(props) {
+  const listItems = props.recipes.map((recipe) =>
+    <RecipeItem key={recipe.name} recipe={recipe}/>
   );
   return (
     <ul>{listItems}</ul>
   );
 }
 
-// class Test extends React.Component {
-//   render () {
-//     return (
-//       <div>
-//         <p class="text-gray-500">{recipes[0].name}</p>
-//       </div>
-//     );
-//   }
-// }
+function RecipeSections() {
+  const listItems = allRecipes_keys.map((recipeSection) =>
+    <div key={recipeSection}>
+      <h2 className="pt-3">{recipeSection}</h2>
+      <RecipeList recipes={allRecipes[recipeSection]} />
+    </div>
+  );
+  return (
+      <div>{listItems}</div>
+  );
+}
 
 function App() {
   return (
     <div>
       <Header />
-      <NumberList />
+      <RecipeSections />
     </div>
   );
 }
