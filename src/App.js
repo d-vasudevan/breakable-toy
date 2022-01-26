@@ -1,51 +1,41 @@
 import './App.css';
 import React from 'react';
-import allRecipes from './recipes.js';
+import { Routes, Route, Link } from "react-router-dom";
 
-const allRecipes_keys = Object.keys(allRecipes);
+import Home from "./Home.js";
+import Recipes from "./routes/recipes.js"
+import Recipe from "./routes/recipe.js"
 
-function Header() {
-    return (
-      <div>
-        <h1>Recipes</h1>
-      </div>
-    );
-}
-
-function RecipeItem(props) {
+function MainNav() {
   return (
-    <li>
-      <p className="text-gray-500">{props.recipe.name}</p>
-    </li>
-  );
-}
-
-function RecipeList(props) {
-  const listItems = props.recipes.map((recipe) =>
-    <RecipeItem key={recipe.name} recipe={recipe}/>
-  );
-  return (
-    <ul>{listItems}</ul>
-  );
-}
-
-function RecipeSections() {
-  const listItems = allRecipes_keys.map((recipeSection) =>
-    <div key={recipeSection}>
-      <h2 className="pt-3">{recipeSection}</h2>
-      <RecipeList recipes={allRecipes[recipeSection]} />
-    </div>
-  );
-  return (
-      <div>{listItems}</div>
+    <nav>
+        <img src='' alt='menu icon'></img>
+        <ul>
+          <li><img src='' alt='portfolio'></img></li>
+          <li><img src='' alt='linkedin'></img></li>
+          <li><img src='' alt='github'></img></li>
+        </ul>
+      </nav>
   );
 }
 
 function App() {
   return (
-    <div>
-      <Header />
-      <RecipeSections />
+    <div className="App">
+      <MainNav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/recipes" element={<Recipes />} />
+        <Route path="/recipes/:recipeId" element={<Recipe />} />
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: "1rem" }}>
+              <p>There's nothing here!</p>
+            </main>
+          }
+        />
+      </Routes>
     </div>
   );
 }
