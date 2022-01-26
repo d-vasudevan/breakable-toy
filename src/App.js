@@ -4,14 +4,12 @@ import allRecipes from './recipes.js';
 
 const allRecipes_keys = Object.keys(allRecipes);
 
-class Header extends React.Component {
-  render () {
+function Header() {
     return (
       <div>
-        <h1>My Recipes</h1>
+        <h1>Recipes</h1>
       </div>
     );
-  }
 }
 
 function RecipeItem(props) {
