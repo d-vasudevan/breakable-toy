@@ -42,10 +42,8 @@ const allRecipes = {
                 "do x", 
                 "then do y"
             ]
-        }],
-    "Rice Side Dishes" :
-        [{
-            "name" : "Rice Side Dishes recipe 1",
+        },{
+            "name" : "breakfast recipe 3",
             "img_url" : "https://images-prod.healthline.com/hlcmsresource/images/AN_images/healthy-eating-ingredients-1296x728-header.jpg",
             "ingredients" : [
                 {
@@ -66,7 +64,7 @@ const allRecipes = {
                 "then do y"
             ]
         },{
-            "name" : "Rice Side Dishes recipe 2",
+            "name" : "breakfast recipe 4",
             "img_url" : "https://images-prod.healthline.com/hlcmsresource/images/AN_images/healthy-eating-ingredients-1296x728-header.jpg",
             "ingredients" : [
                 {
@@ -86,8 +84,97 @@ const allRecipes = {
                 "do x", 
                 "then do y"
             ]
-        }]
-
+        }],
+        "Rice Side Dishes" :
+            [{
+                "name" : "Rice Side Dishes recipe 1",
+                "img_url" : "https://images-prod.healthline.com/hlcmsresource/images/AN_images/healthy-eating-ingredients-1296x728-header.jpg",
+                "ingredients" : [
+                    {
+                        "ingredient_name" : "a", 
+                        "ingredient_quantity" : "amount"
+                    },
+                    {
+                        "ingredient_name" : "b", 
+                        "ingredient_quantity" : "amount"
+                    },
+                    {
+                        "ingredient_name" : "c", 
+                        "ingredient_quantity" : "amount"
+                    }
+                ],
+                "instructions" : [
+                    "do x", 
+                    "then do y"
+                ]
+            },{
+                "name" : "Rice Side Dishes recipe 2",
+                "img_url" : "https://images-prod.healthline.com/hlcmsresource/images/AN_images/healthy-eating-ingredients-1296x728-header.jpg",
+                "ingredients" : [
+                    {
+                        "ingredient_name" : "a", 
+                        "ingredient_quantity" : "amount"
+                    },
+                    {
+                        "ingredient_name" : "b", 
+                        "ingredient_quantity" : "amount"
+                    },
+                    {
+                        "ingredient_name" : "c", 
+                        "ingredient_quantity" : "amount"
+                    }
+                ],
+                "instructions" : [
+                    "do x", 
+                    "then do y"
+                ]
+            }]
+            ,
+            "Rice Side Dishes 2" :
+                [{
+                    "name" : "Rice Side Dishes 2 recipe 1",
+                    "img_url" : "https://images-prod.healthline.com/hlcmsresource/images/AN_images/healthy-eating-ingredients-1296x728-header.jpg",
+                    "ingredients" : [
+                        {
+                            "ingredient_name" : "a", 
+                            "ingredient_quantity" : "amount"
+                        },
+                        {
+                            "ingredient_name" : "b", 
+                            "ingredient_quantity" : "amount"
+                        },
+                        {
+                            "ingredient_name" : "c", 
+                            "ingredient_quantity" : "amount"
+                        }
+                    ],
+                    "instructions" : [
+                        "do x", 
+                        "then do y"
+                    ]
+                },{
+                    "name" : "Rice Side Dishes 2 recipe 2",
+                    "img_url" : "https://images-prod.healthline.com/hlcmsresource/images/AN_images/healthy-eating-ingredients-1296x728-header.jpg",
+                    "ingredients" : [
+                        {
+                            "ingredient_name" : "a", 
+                            "ingredient_quantity" : "amount"
+                        },
+                        {
+                            "ingredient_name" : "b", 
+                            "ingredient_quantity" : "amount"
+                        },
+                        {
+                            "ingredient_name" : "c", 
+                            "ingredient_quantity" : "amount"
+                        }
+                    ],
+                    "instructions" : [
+                        "do x", 
+                        "then do y"
+                    ]
+                }]
+            
 };
 
 export default allRecipes;

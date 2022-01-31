@@ -2,16 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&family=Lato:wght@300&display=swap');
+
+@layer base {
+  body{
+    @apply font-lato;
+  }
+  h1 {
+    @apply font-cormorant text-6xl font-bold tracking-wide text-center;
+  }
+  h2 {
+    @apply font-cormorant text-4xl font-bold tracking-wide;
+  }
+  .caption {
+    @apply text-xl font-bold tracking-wide;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
