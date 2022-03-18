@@ -37,8 +37,11 @@ function SMLinks(props) {
 
 function SMLinkNav(props) {
   let classes = "";
-  if(props.menunav==='true') {
-    classes+= "lg:hidden";
+  if(props.menunav==='true') {//checking if the sm links are in the main nav or in the slide in nav
+    classes+= "lg:hidden"; //hide sm links in slide in when not a mobile screen
+  }
+  else {
+    classes+= "hidden lg:block"; //hide sm links for slide in mobile screens and show on larger ones.
   }
   return (
     <ul className={classes}>
@@ -60,8 +63,8 @@ function SlideInMenuLinks(props) {
 
 function SlideInMenuNav(props) {
     return (
-      <nav id={props.id} className='fixed top-0 left-0 h-screen w-60 lg:ml-16 bg-white border-black border-r hidden'>
-        <ul>
+      <nav id={props.id} className='fixed top-0 left-0 h-screen w-full md:w-96 lg:w-60 lg:ml-16 bg-white border-black md:border-r hidden bg-bg flex flex-col space-y-8 justify-center items-center'>
+        <ul className='font-cormorant text-2xl font-bold tracking-wide space-y-8'>
           <SlideInMenuLinks link="home"/>
           <SlideInMenuLinks link="recipes"/>
         </ul>
@@ -77,7 +80,7 @@ function slideInMenu() {
 
 function MainNav() {
   return (
-    <nav className='flex flex-col w-20 justify-between items-center h-screen pt-5 pb-10 border-r border-black bg-bg'>
+    <nav className='fixed top-0 left-5 md:top-3 md:left-8 lg:top-0 lg:left-0 lg:relative flex flex-col lg:w-20 justify-between items-center lg:h-screen pt-5 pb-10 lg:border-r lg:border-black lg:bg-bg'>
       <button onClick={slideInMenu} className='z-10'><Icons componentName='menu'/></button>
       <SlideInMenuNav id="slideinmenu"/>
       <SMLinkNav  menunav='false'/>
