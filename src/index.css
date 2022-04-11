@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&family=Lato:wght@300&display=swap');
 
 @layer base {
-  body{
+  body {
     @apply font-lato text-lg;
   }
   h1 {
@@ -21,4 +21,3 @@
     @apply text-base lg:text-xl font-bold tracking-wide;
   }
 }
-

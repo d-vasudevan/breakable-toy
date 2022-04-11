@@ -1,14 +1,14 @@
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}",],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      'cormorant': ['Cormorant Infant', 'serif'],
-      'lato': ['Lato','sans-serif']
+      cormorant: ['Cormorant Infant', 'serif'],
+      lato: ['Lato', 'sans-serif'],
     },
     colors: {
-      'bg': '#F6F6EE'
+      bg: '#F6F6EE',
     },
     extend: {},
   },
   plugins: [],
-}
+};
