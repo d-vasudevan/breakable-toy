@@ -36,14 +36,7 @@ function Header() {
 function RecipeItem(props) {
   return (
     <li className="md:w-1/2 lg:w-1/3 shrink p-3">
-      <Link
-        to={`/recipes/${props.recipeId}`}
-        state={{
-          name: 'props.recipe',
-          somevalue: true,
-        }}
-        key={props.recipe.name}
-      >
+      <Link to={`/recipes/${props.recipeId}`} key={props.recipe.name}>
         <img
           src={props.recipe.img_url}
           className="object-cover border h-60 w-full"
@@ -58,8 +51,8 @@ function RecipeItem(props) {
 }
 
 function RecipeList(props) {
-  let recipeSection_keys = Object.keys(props.recipes);
-  const listItems = recipeSection_keys.map((recipe) => (
+  let recipeSectionKeys = Object.keys(props.recipes);
+  const listItems = recipeSectionKeys.map((recipe) => (
     <RecipeItem key={recipe} recipeId={recipe} recipe={props.recipes[recipe]} />
   ));
   return <ul className="flex flex-wrap">{listItems}</ul>;

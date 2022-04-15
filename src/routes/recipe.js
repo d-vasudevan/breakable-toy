@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { getRecipe } from '../recipes';
 
-function IngredientItem(props) {
-  const listItems = props.ingredients.map((ingredient) => (
+function IngredientItem({ ingredients }) {
+  return ingredients.map((ingredient) => (
     <li
       key={ingredient.ingredient_name}
       className="justify-self-center text-center"
@@ -18,21 +18,18 @@ function IngredientItem(props) {
       <div>{ingredient.ingredient_quantity}</div>
     </li>
   ));
-  return listItems;
 }
 
-function RecipeSteps(props) {
-  const listItems = props.instructions.map((instructions) => (
+function RecipeSteps({ instructions }) {
+  return instructions.map((instructions) => (
     <li key={instructions}>{instructions}</li>
   ));
-  return listItems;
 }
 
-function KeyIngrdientList(props) {
-  const items = props.keyIngredients.map((ingredient) => (
+function KeyIngrdientList({ keyIngredients }) {
+  return keyIngredients.map((ingredient) => (
     <span key={ingredient}>{ingredient}, </span>
   ));
-  return items;
 }
 
 function Recipe() {
