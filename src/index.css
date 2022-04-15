@@ -5,17 +5,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&family=Lato:wght@300&display=swap');
 
 @layer base {
-  body{
-    @apply font-lato;
+  body {
+    @apply font-lato text-lg;
   }
   h1 {
-    @apply font-cormorant text-6xl font-bold tracking-wide text-center;
+    @apply font-cormorant text-3xl lg:text-6xl font-bold tracking-wide text-center;
   }
   h2 {
-    @apply font-cormorant text-4xl font-bold tracking-wide;
+    @apply font-cormorant text-xl lg:text-4xl font-bold tracking-wide;
+  }
+  h3 {
+    @apply font-cormorant text-lg lg:text-xl font-bold tracking-wide;
   }
   .caption {
-    @apply text-xl font-bold tracking-wide;
+    @apply text-base lg:text-xl font-bold tracking-wide;
   }
 }
-
